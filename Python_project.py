@@ -5,7 +5,7 @@ import tkinter.messagebox
 root = Tk()
 root.title("Scientific Calculator")
 root.configure(background = 'white')
-root.resizable(width=False, height=False)
+root.resizable(width=None, height=None)
 root.geometry("480x568+450+90")
 calc = Frame(root)
 calc.grid()
@@ -183,7 +183,7 @@ class Calc():
 
 	def log1p(self):
 		self.result = False
-		self.current = math.log1p(float(txtDisplay.get()))
+		self.current = math.log10(float(txtDisplay.get()))
 		self.display(self.current)
 
 added_value = Calc()
